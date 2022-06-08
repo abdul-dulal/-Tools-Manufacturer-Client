@@ -17,7 +17,12 @@ const Products = () => {
   }, []);
   return (
     <>
-      <div className="text-center">
+      <div
+        className="text-center"
+        data-aos="fade-up"
+        data-aos-delay="250"
+        data-aos-duration="1000"
+      >
         <h1 className="uppercase text-3xl font-bold">Available Products</h1>
         <p className="text-lg">
           All best seller product are now available for you and your can buy

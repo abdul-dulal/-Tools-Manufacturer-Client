@@ -5,9 +5,8 @@ const Banner = () => {
   const navigate = useNavigate();
   return (
     <div class="hero min-h-screen" style={{ background: `url(${banner})` }}>
-      <div class=""></div>
       <div class="hero-content text-center text-neutral-content">
-        <div class="max-w-md">
+        <div class="max-w-md" data-aos="fade-up" data-aos-duration="1000">
           <h1 class="mb-5 text-3xl font-bold uppercase">
             new tecnology &amp; build
           </h1>

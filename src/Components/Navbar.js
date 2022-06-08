@@ -1,33 +1,28 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Logout from "./Sheared/Logout";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./firebase.init";
 const Navbar = () => {
   const [user] = useAuthState(auth);
-
+  const { pathname } = useLocation();
+  const [click, setClick] = useState(false);
   const navItem = (
     <>
       <li className="text-xl font-semibold">
-        <Link to="/home">Home</Link>
+        <NavLink to="/home">Home</NavLink>
       </li>
       <li className="text-xl font-semibold">
-        <Link to="/blog">Blogs</Link>
+        <NavLink to="/allproduct">AllProduct</NavLink>
       </li>
+      {user && (
+        <li className="text-xl font-semibold">
+          <NavLink to="/dashboard">Dashboard</NavLink>
+        </li>
+      )}
+
       <li className="text-xl font-semibold">
-        <Link to="/purchase">Purchase</Link>
-      </li>
-      <li className="text-xl font-semibold">
-        <Link to="/myportfolio">MyPortfolio</Link>
-      </li>
-      <li className="text-xl font-semibold">
-        {user && <Link to="/dashboard">Dashboard</Link>}
-      </li>
-      <li className="text-xl font-semibold">
-        {user ? <Logout /> : <Link to={"/login"}> Login</Link>}
-      </li>
-      <li className="text-xl font-semibold">
-        <Link to={"/signup"}>Register</Link>
+        <NavLink to={"/signup"}>Contact</NavLink>
       </li>
     </>
   );
@@ -68,29 +63,53 @@ const Navbar = () => {
           <ul className="menu menu-horizontal p-0">{navItem}</ul>
         </div>
         <div className="navbar-end">
-          {/* <label className="mr-3 font-bold text-xl  ">
-            {user.displayName}
-          </label> */}
-          <label
-            tabIndex="0"
-            for="my-drawer-2"
-            className="btn btn-ghost lg:hidden btn btn-primary drawer-button"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div class="dropdown mr-3">
+            <label
+              tabindex="0"
+              class=" text-xl font-semibold cursor-pointer  "
+              onClick={() => setClick(!click)}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </label>
+              {user?.displayName}
+            </label>
+            <ul
+              tabindex="0"
+              class={
+                click
+                  ? "dropdown-content menu p-2 shadow  rounded-box  bg-base-200 "
+                  : "hidden"
+              }
+            >
+              <li>
+                <label className="text-xl font-bold hover:bg-secondary mt-3 cursor-pointer">
+                  {user && <Logout />}
+                </label>
+              </li>
+            </ul>
+          </div>
+          {pathname == "/dashboard" ? (
+            <label
+              tabIndex="0"
+              for="my-drawer-2"
+              className="btn btn-ghost lg:hidden  btn-primary drawer-button"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

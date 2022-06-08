@@ -6,7 +6,12 @@ const Review = ({ review }) => {
 
   return (
     <div className="">
-      <div class="card w-max-lg bg-base-100 shadow-sm">
+      <div
+        class="card w-max-lg bg-base-100 shadow-sm"
+        data-aos="fade-up"
+        data-aos-delay="250"
+        data-aos-duration="3000"
+      >
         <div class="avatar">
           <div class="w-32 rounded-full mx-auto block mt-7">
             <img src={img} alt="" />

@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import auth from "../../firebase.init";
 import useAdmin from "../../hooks/useAdmin";
 
@@ -18,34 +18,28 @@ const DashBoard = () => {
           <label for="my-drawer-2" class="drawer-overlay"></label>
           <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
             <li>
-              <Link to="/dashboard">My Profile</Link>
+              <NavLink to="/dashboard/addproduct"> Add Product</NavLink>
             </li>
             {!admin && (
               <li>
-                <Link to="/dashboard/myorder"> My Order</Link>
+                <NavLink to="/dashboard/myorder"> My Order</NavLink>
               </li>
             )}
             {!admin && (
               <li>
-                <Link to="/dashboard/addreview"> Add Review</Link>
+                <NavLink to="/dashboard/addreview"> Add Review</NavLink>
               </li>
             )}
 
-            <li>
-              <Link to="/dashboard/addproduct"> Add Product</Link>
-            </li>
-
-            <li>
-              <Link to="/dashboard/updateuser">Update Profile</Link>
-            </li>
-
-            <li>
-              <Link to="/dashboard/alluser"> Make Admin</Link>
-            </li>
             {admin && (
-              <li>
-                <Link to="/dashboard/manageorder"> Mange Orders</Link>
-              </li>
+              <>
+                <li>
+                  <Link to="/dashboard/alluser"> Make Admin</Link>
+                </li>
+                <li>
+                  <NavLink to="/dashboard/manageorder"> Mange Orders</NavLink>
+                </li>
+              </>
             )}
           </ul>
         </div>

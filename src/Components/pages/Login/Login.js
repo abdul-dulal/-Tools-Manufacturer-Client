@@ -6,10 +6,8 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useUpdatePassword } from "react-firebase-hooks/auth";
 import useToken from "../../hooks/useToken";
 import Loading from "../../Sheared/Loading";
-import { data } from "autoprefixer";
 
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -37,7 +35,7 @@ const Login = () => {
     errElement = (
       <p className="text-red-500">
         <small>
-          {error?.message} {Gerror.message}
+          {error?.message} {Gerror?.message}
         </small>
       </p>
     );
@@ -51,9 +49,10 @@ const Login = () => {
     signInWithGoogle();
   };
   return (
-    <div class="hero py-12 ">
+    <div class="hero py-12 bg-base-200 ">
       <div class="  w-full max-w-sm shadow-2xl bg-base-100">
         <div class="card-body">
+          <h1 className="text-xl text-center font-bold"> Login Our platfrom</h1>
           <div className="w-full block mx-auto">
             <div className="py-4 ">
               <form onSubmit={handleSubmit(onSubmit)}>
@@ -114,7 +113,12 @@ const Login = () => {
                   )}
                 </label>
                 <p className="text-red-700 font-bold">{errElement}</p>
-                <input type="submit" className="btn btn-primary" /> <br />
+                {/* <input type="submit"  /> */}
+                <button type="submit" className="btn btn-primary">
+                  {" "}
+                  Login
+                </button>
+                <br />
                 <button
                   className="btn btn-secondary my-4"
                   onClick={loginGoogle}

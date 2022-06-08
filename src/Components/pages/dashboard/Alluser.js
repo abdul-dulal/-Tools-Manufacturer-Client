@@ -1,13 +1,9 @@
 import React, { useEffect } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "../../firebase.init";
 import { useQuery } from "react-query";
 import Loading from "../../Sheared/Loading";
 import UserDeatils from "./UserDeatils";
 
 const Alluser = ({ profile }) => {
-  // const [user] = useAuthState(auth);
-
   const {
     isLoading,
     error,

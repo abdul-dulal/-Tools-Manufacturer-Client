@@ -24,10 +24,14 @@ const Allproduct = () => {
           All <span className="text-orange-300 ml-2">Products</span>
         </h1>
       </div>
-      <div className="grid lg:grid-cols-3 gap-5 px-12 py-12 ">
+      <div
+        className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 px-12 py-12 "
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         {products?.map((porduct) => (
           <div className="">
-            <div class="card w-96 bg-base-100 shadow-xl">
+            <div class="card  bg-base-100 shadow-xl">
               <figure class="px-10 pt-10">
                 <img src={porduct.img} alt="Shoes" class="rounded-xl" />
               </figure>

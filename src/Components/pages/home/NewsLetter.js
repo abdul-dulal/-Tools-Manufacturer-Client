@@ -6,7 +6,7 @@ const NewsLetter = () => {
       <div class="hero  h-[400px]" style={{ background: `url(${newsletter})` }}>
         <div class="hero-overlay bg-opacity-60"></div>
         <div class="hero-content text-center text-neutral-content">
-          <div class="max-w-md">
+          <div class="max-w-md" data-aos="fade-up" data-aos-duration="3000">
             <p className="text-xl mb-5">
               SPECIAL <span className="text-orange-700">OFFER</span> FOR
               SUBSCRIPTION

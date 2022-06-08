@@ -16,8 +16,12 @@ const BusinessSummary = () => {
           try to understand user expection
         </p>
       </div>
-      <div className="grid lg:grid-cols-4 sm:grid-cols-1 gap-5 px-12">
-        <div class="card w-mx-lg bg-base-100 shadow-xl text-2xl ">
+      <div className="grid lg:grid-cols-4 sm:grid-cols-1 gap-10 py-10 px-12">
+        <div
+          class="card w-mx-lg bg-base-100 shadow-xl text-2xl "
+          data-aos="fade-left"
+          data-aos-duration="1500"
+        >
           <p className=""></p>
           <div class="card-body items-center text-center">
             <p className="text-green-700 text-5xl">
@@ -27,7 +31,11 @@ const BusinessSummary = () => {
             <p className="text-bold">Countries</p>
           </div>
         </div>
-        <div class="card w-mx-lg bg-base-100 shadow-xl text-2xl ">
+        <div
+          class="card w-mx-lg bg-base-100 shadow-xl text-2xl "
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           <p className=""></p>
           <div class="card-body items-center text-center">
             <p className="text-green-700 text-5xl">
@@ -37,7 +45,11 @@ const BusinessSummary = () => {
             <p className="text-bold">Complete Project</p>
           </div>
         </div>
-        <div class="card w-mx-lg bg-base-100 shadow-xl text-2xl ">
+        <div
+          class="card w-mx-lg bg-base-100 shadow-xl text-2xl "
+          data-aos="fade-down"
+          data-aos-duration="1500"
+        >
           <p className=""></p>
           <div class="card-body items-center text-center">
             <p className="text-green-700 text-5xl">
@@ -47,7 +59,11 @@ const BusinessSummary = () => {
             <p className="text-bold">Happy Clients</p>
           </div>
         </div>
-        <div class="card w-mx-lg bg-base-100 shadow-xl text-2xl ">
+        <div
+          class="card w-mx-lg bg-base-100 shadow-xl text-2xl "
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
           <p className=""></p>
           <div class="card-body items-center text-center">
             <p className="text-green-700 text-5xl">

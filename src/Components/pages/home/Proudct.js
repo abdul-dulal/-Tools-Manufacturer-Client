@@ -6,7 +6,12 @@ const Proudct = ({ product }) => {
   const navigate = useNavigate();
 
   return (
-    <div class="card w-96 bg-base-100 shadow-xl">
+    <div
+      class="card w-96 bg-base-100 shadow-xl"
+      data-aos="zoom-in"
+      data-aos-delay="250"
+      data-aos-duration="1000"
+    >
       <figure class="px-10 pt-10">
         <img src={img} alt="Shoes" class="rounded-xl" />
       </figure>

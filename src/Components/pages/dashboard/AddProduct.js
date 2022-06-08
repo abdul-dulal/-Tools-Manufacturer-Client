@@ -22,9 +22,7 @@ const AddProduct = () => {
       body: JSON.stringify(data),
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-      });
+      .then((data) => {});
     toast.success("Successfully product Added");
   };
   return (
