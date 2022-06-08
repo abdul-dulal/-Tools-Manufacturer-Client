@@ -4,14 +4,25 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 ## live site Link : [https://bagdom-132e6.web.app/}
+
+## Featured 
+* A full-stack single-page Ecommerce web app where people can take and book
+services.
+* Login system with firebase and private routes.
+* Dashboard for users and admins where admins can do CRUD operations and
+users can give reviews and monitor their booking list.
+
+
  
- # uses method
+ ##  Technology used
  * React 
  * Tailwind
+ * nodejs
+ * express js
+ * mongodb
+ * Firebase Authentication
  * Stripe js
- * React Query
- * React Router 
- * React spiners
+
 
 In the project directory, you can run:
 
