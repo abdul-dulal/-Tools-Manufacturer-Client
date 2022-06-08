@@ -14,7 +14,7 @@ const Purchase = () => {
 
   const [user] = useAuthState(auth);
   useEffect(() => {
-    fetch(`http://localhost:4000/product/${id}`)
+    fetch(`https://secret-brook-35937.herokuapp.com/product/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleProduct(data));
   }, [id]);
@@ -28,7 +28,7 @@ const Purchase = () => {
       price: quantity * price,
       quantity,
     };
-    fetch(`http://localhost:4000/order`, {
+    fetch(`https://secret-brook-35937.herokuapp.com/order`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

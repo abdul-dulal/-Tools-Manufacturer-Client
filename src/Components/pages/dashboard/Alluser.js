@@ -10,7 +10,7 @@ const Alluser = ({ profile }) => {
     data: users,
     refetch,
   } = useQuery("repoData", () =>
-    fetch("http://localhost:4000/users", {
+    fetch("https://secret-brook-35937.herokuapp.com/users", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -12,7 +12,7 @@ const AddReview = () => {
 
     event.target.reset();
 
-    fetch("http://localhost:4000/review", {
+    fetch("https://secret-brook-35937.herokuapp.com/review", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",

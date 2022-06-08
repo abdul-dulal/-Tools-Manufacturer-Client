@@ -5,7 +5,7 @@ const Order = ({ order, index, refetch }) => {
   const { prodcutNmae, quantity, price, _id, transactionId } = order;
   const navigate = useNavigate();
   const cancelOrder = () => {
-    fetch(`http://localhost:4000/delete/${_id}`, {
+    fetch(`https://secret-brook-35937.herokuapp.com/delete/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

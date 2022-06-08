@@ -5,7 +5,7 @@ const Allproduct = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch(`http://localhost:4000/product`, {
+    fetch(`https://secret-brook-35937.herokuapp.com/product`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
