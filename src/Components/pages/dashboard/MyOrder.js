@@ -15,7 +15,7 @@ const MyOrder = () => {
     data: orders,
     refetch,
   } = useQuery("repoData", () =>
-    fetch(`https://secret-brook-35937.herokuapp.com/order?email=${email}`, {
+    fetch(`http://localhost:4000/order?email=${email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

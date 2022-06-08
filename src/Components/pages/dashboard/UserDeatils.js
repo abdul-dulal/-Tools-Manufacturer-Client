@@ -8,7 +8,7 @@ const UserDeatils = ({ newUser, index, refetch }) => {
   const { email, role } = newUser;
   const currentUser = { email: email };
   const makeAdmin = () => {
-    fetch(`https://secret-brook-35937.herokuapp.com/user/admin/${email}`, {
+    fetch(`http://localhost:4000/user/admin/${email}`, {
       method: "PUT", // or 'PUT'
       headers: {
         "content-Type": "application/json",

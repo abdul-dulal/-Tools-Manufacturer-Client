@@ -12,7 +12,7 @@ const CheckoutForm = ({ payment }) => {
   const { price, userEmail, userName, _id } = payment;
   const newPrice = { price: price };
   useEffect(() => {
-    fetch(`https://secret-brook-35937.herokuapp.com/create-payment-intent`, {
+    fetch(`http://localhost:4000/create-payment-intent`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -77,7 +77,7 @@ const CheckoutForm = ({ payment }) => {
         orderId: _id,
         transactionId: paymentIntent.id,
       };
-      const url = `https://secret-brook-35937.herokuapp.com/order/${_id}`;
+      const url = `http://localhost:4000/order/${_id}`;
 
       fetch(url, {
         method: "PUT",

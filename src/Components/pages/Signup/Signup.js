@@ -180,15 +180,21 @@ const Sign = () => {
                   accept all tearms &amp; conditions
                 </span>
                 <br />
-                <input
+                <button
                   disabled={!agree}
                   type="submit"
-                  className="btn btn-primary mt-3"
-                />
+                  className="btn btn-primary mt-3 w-full"
+                >
+                  Signup
+                </button>
                 <br />
               </form>
-              <button class="btn btn-warning my-3" onClick={signinGoogle}>
-                SignWith Goggle
+              <div class="divider">OR</div>
+              <button
+                class="btn btn-warning my-3 w-full"
+                onClick={signinGoogle}
+              >
+                SignWith Google
               </button>{" "}
               <br />
               <label>

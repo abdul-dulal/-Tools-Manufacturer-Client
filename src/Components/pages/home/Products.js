@@ -6,7 +6,7 @@ const Products = () => {
   // const newProduct = products?.slice(0, 6);
 
   useEffect(() => {
-    fetch(`https://secret-brook-35937.herokuapp.com/product`, {
+    fetch(`http://localhost:4000/product`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

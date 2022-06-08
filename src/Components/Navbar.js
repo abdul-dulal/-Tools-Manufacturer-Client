@@ -55,27 +55,32 @@ const Navbar = () => {
               {navItem}
             </ul>
           </div>
-          <Link to={"/"} className="btn btn-ghost normal-case text-xl">
-            Bagdom
+          <Link
+            to={"/"}
+            className=" ml-3 text-xl text-primary font-bold uppercase hover:bg-none  sm: hidden sm:hidden lg:block"
+          >
+            <span className="text-secondary">Bag</span> dom
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">{navItem}</ul>
         </div>
         <div className="navbar-end">
-          <div class="dropdown mr-3">
-            <label
-              tabindex="0"
-              class=" text-xl font-semibold cursor-pointer  "
-              onClick={() => setClick(!click)}
-            >
-              {user?.displayName}
-            </label>
+          <div class="dropdown mr-3 ">
+            {user?.displayName ? (
+              <label
+                tabindex="0"
+                class=" text-xl font-semibold cursor-pointer  "
+                onClick={() => setClick(!click)}
+              >
+                {user?.displayName}
+              </label>
+            ) : undefined}
             <ul
               tabindex="0"
               class={
                 click
-                  ? "dropdown-content menu p-2 shadow  rounded-box  bg-base-200 "
+                  ? "dropdown-content  p-2  rounded-box  bg-base-200 "
                   : "hidden"
               }
             >

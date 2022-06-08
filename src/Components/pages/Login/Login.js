@@ -114,13 +114,13 @@ const Login = () => {
                 </label>
                 <p className="text-red-700 font-bold">{errElement}</p>
                 {/* <input type="submit"  /> */}
-                <button type="submit" className="btn btn-primary">
-                  {" "}
+                <button type="submit" className="btn btn-primary w-full">
                   Login
                 </button>
                 <br />
+                <div class="divider">OR</div>
                 <button
-                  className="btn btn-secondary my-4"
+                  className="btn btn-secondary my-4 w-full"
                   onClick={loginGoogle}
                 >
                   Login Google

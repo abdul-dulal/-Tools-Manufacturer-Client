@@ -15,7 +15,7 @@ const MyProfile = () => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetch(`https://secret-brook-35937.herokuapp.com/profile`)
+    fetch(`http://localhost:4000/profile`)
       .then((res) => res.json())
       .then((data) => setProfile(data[0].profile));
   }, [user]);

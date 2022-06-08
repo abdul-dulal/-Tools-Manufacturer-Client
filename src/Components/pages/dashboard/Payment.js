@@ -15,9 +15,7 @@ const Payment = () => {
     error,
     data: payment,
   } = useQuery(["repoData", id], () =>
-    fetch(`https://secret-brook-35937.herokuapp.com/order/${id}`).then((res) =>
-      res.json()
-    )
+    fetch(`http://localhost:4000/order/${id}`).then((res) => res.json())
   );
   if (isLoading) {
     return <Loading />;

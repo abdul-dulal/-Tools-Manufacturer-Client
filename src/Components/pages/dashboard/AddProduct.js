@@ -14,7 +14,7 @@ const AddProduct = () => {
 
     event.target.reset();
 
-    fetch("https://secret-brook-35937.herokuapp.com/product", {
+    fetch("http://localhost:4000/product", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
